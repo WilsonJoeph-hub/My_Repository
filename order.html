@@ -17,13 +17,14 @@
       <div class="container">
         <header>Order Details</header>
 
-        <form id="orderingform" name="orderform">
+        <form id="orderingform" name="orderform" action="https://api.web3forms.com/submit" method="POST">
           <fieldset id="stage-1">
             <div class="form first">
               <div class="details shop">
                 <span class="title">Shopdetails</span>
 
                 <div class="fields">
+                  <input type="hidden" name="access_key" value="41c13145-d455-4586-9d52-9ad7ebd0d38f">
                   <div class="input-field">
                     <label for="shopname">Shop Name</label>
                     <input type="text" name="shopname" id="shopname" required />
