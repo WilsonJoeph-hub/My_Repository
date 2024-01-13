@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html::-webkit-scrollbar {
+  width: 12px;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #0007;
+}
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.8)),
+    url(img/pexels-mareefe-678414.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+footer h4 {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 25px;
+}
+footer .icons {
+  width: 100%;
+  color: #f44336;
+  font-size: 20px;
+  letter-spacing: 5px;
+  padding: auto;
+  margin-top: 8px;
+}
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  position: absolute;
+  top: -80px;
+  left: -40px;
+  width: 400px;
+  height: 350px;
+}
+nav h1 {
+  font-size: 50px;
+  text-decoration: none;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.text-box {
+  width: 85%;
+  color: #fff;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 62px;
+  padding-bottom: 8px;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 20px;
+  color: #fff;
+}
+.hero-btn {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 13px 8px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.hero-btn:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 1s;
+  border-radius: 3px;
+}
+nav .fa-xmark,
+nav .fa-bars {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .text-box {
+    position: absolute;
+    top: 7%;
+    text-align: center;
+  }
+  nav .logo {
+    position: absolute;
+    width: 250px;
+    height: 220px;
+    top: -47px;
+    left: -25px;
+  }
+  .text-box h1 {
+    font-size: 25px;
+    text-wrap: wrap;
+  }
+  .text-box p {
+    font-size: 14px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: fixed;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa-xmark,
+  nav .fa-bars {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  nav .fa-bars {
+    margin-top: 27px;
+  }
+  nav .fa-xmark {
+    margin: 25px 20px;
+  }
+  .nav-links ul {
+    padding: 20px;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 84%;
+    margin: auto;
+  }
+  footer h4 {
+    margin-bottom: 15px;
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 17px;
+    grid-area: h;
+  }
+  footer .icons {
+    color: #f44336;
+    font-size: 15px;
+    letter-spacing: 5px;
+  }
+  footer p {
+    font-size: 13px;
+  }
+}
+.about {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.aboutus-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 85%;
+  min-height: 100vh;
+  margin: auto;
+  padding: auto;
+}
+.aboutus-container p {
+  text-align: justify;
+  font-size: 20px;
+}
+.aboutus-container li {
+  font-size: 20px;
+  list-style-type: none;
+  padding: 4px;
+}
+.aboutus-title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 30px;
+}
+@media (max-width: 700px) {
+  .aboutus-container p {
+    font-size: 16px;
+  }
+  .aboutus-container li {
+    font-size: 16px;
+  }
+}
+.Recipes {
+  width: 85%;
+  min-height: 100vh;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  position: relative;
+}
+.Recipes h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.Recipes .secondpara {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 10px;
+}
+.row {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.recipe-col {
+  flex-basis: 31%;
+  background: #f5c9c9;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+.recipe-col:hover {
+  box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+    margin: 10px 10px;
+    text-align: center;
+  }
+}
+:root {
+  --bgcolor: #313638;
+  --white: #e8e9eb;
+  --orange: #ef6461;
+}
+.contactus {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(img/pexels-mareefe-1008747.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 50vh;
+  width: 100%;
+}
+.contacthead {
+  top: 50%;
+}
+.location {
+  width: 85%;
+  margin: auto;
+  padding: 80px 0;
+}
+.location iframe {
+  width: 100%;
+}
+.contact-us {
+  width: 85%;
+  margin: auto;
+}
+.contact-col {
+  flex-basis: 48%;
+  margin-bottom: 30px;
+}
+.contact-col div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.contact-col div .fa-solid {
+  font-size: 28px;
+  color: #f44336;
+  margin: 10px;
+  margin-right: 20px;
+}
+.contact-col div p {
+  padding: 0;
+}
+.contact-col div h5 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 400;
+}
+.contact-col input,
+.contact-col textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.red-button {
+  border: 1px solid #f44336;
+  color: #f44336;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 13px 8px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.red-button:hover {
+  color: #fff;
+  border: 1px solid white;
+  background: #f44336;
+  transition: 1s;
+}
+@media (max-width: 700px) {
+  .contact-col input,
+  .contact-col textarea {
+    width: 85%;
+  }
+  .contact-us .logo {
+    top: 2%;
+  }
+  .contact-col div h5 {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  .contact-col div p {
+    font-size: 12px;
+  }
+  .contact-col div .fa-solid {
+    font-size: 18px;
+    color: #f44336;
+    margin: 7px;
+    margin-right: 10px;
+  }
+}
+.productheader {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(img/christian-burri-eHjwyEjYCwQ-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 50vh;
+  width: 100%;
+}
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(img/pranjall-kumar-EUS8zqR_KlI-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.main .table {
+  width: 88%;
+  height: 100vh;
+  margin: auto;
+  background-color: #fff5;
+  backdrop-filter: blur(7px);
+  border-radius: 15px;
+}
+.table-header {
+  width: 100%;
+  padding: 25px 35px;
+  background-color: #fff7;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.table-body {
+  width: 95%;
+  max-height: calc(84% - 0.8rem);
+  background-color: #fffb;
+  margin: 21px auto;
+  border-radius: 15px;
+  overflow: auto;
+}
+.table-body::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+  margin-right: 3px;
+}
+.table-body::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #0005;
+}
+.product-head {
+  margin-top: 50px;
+}
+table,
+th,
+td {
+  padding: 14px;
+  border-collapse: collapse;
+}
+thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #d5d1defe;
+}
+tbody tr:nth-child(even) {
+  background-color: #00000009;
+}
+tbody tr:hover {
+  background-color: #fff9;
+}
+@media (max-width: 700px) {
+  .table-body {
+    max-height: calc(79% - 0.8rem);
+  }
+}
